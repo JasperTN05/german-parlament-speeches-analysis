@@ -10,10 +10,10 @@ Original file is located at
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from main import get_ed8_emotions
+from sentiment_classifier import get_ed8_emotions
 
-speeches = pd.read_csv("speeches_filtered.csv")
-factions = pd.read_csv("factions.csv")
+speeches = pd.read_csv("./blob/speeches_filtered.csv")
+factions = pd.read_csv("./blob/factions.csv")
 
 speeches = speeches[speeches['positionShort'] != "Presidium of Parliament"]
 speeches = speeches[speeches['speechContent'].str.split().str.len() > 80]
